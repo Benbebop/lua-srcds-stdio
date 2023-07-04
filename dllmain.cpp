@@ -38,13 +38,17 @@ static int srcdscontrol_write(lua_State* L) {
 	return 1;
 }
 
-static void register_srcdscontrol(lua_State* L) {
-	lua_register(L, LUA_SRCDSCONTROL, srcdscontrol_new);
-	luaL_newmetatable(L, LUA_SRCDSCONTROL);
-	lua_pushcfunction(L, srcdscontrol_gc); lua_setfield(L, -2, "__gc");
-	lua_pushvalue(L, -1); lua_setfield(L, -2, "__index");
-	lua_pushcfunction(L, srcdscontrol_start); lua_setfield(L, -2, "start");
-	lua_pushcfunction(L, srcdscontrol_read); lua_setfield(L, -2, "read");
-	lua_pushcfunction(L, srcdscontrol_write); lua_setfield(L, -2, "write");
-	lua_pop(L, 1);
+extern "C" {
+
+	static int luaopen_srcds_stdio(lua_State* L) {
+		lua_register(L, LUA_SRCDSCONTROL, srcdscontrol_new);
+		luaL_newmetatable(L, LUA_SRCDSCONTROL);
+		lua_pushcfunction(L, srcdscontrol_gc); lua_setfield(L, -2, "__gc");
+		lua_pushvalue(L, -1); lua_setfield(L, -2, "__index");
+		lua_pushcfunction(L, srcdscontrol_start); lua_setfield(L, -2, "start");
+		lua_pushcfunction(L, srcdscontrol_read); lua_setfield(L, -2, "read");
+		lua_pushcfunction(L, srcdscontrol_write); lua_setfield(L, -2, "write");
+		lua_pop(L, 1);
+	}
+
 }

@@ -73,18 +73,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\Program Files\LuaJIT\2.1.0\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files\LuaJIT\2.1.0\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>srcds_stdio</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\Program Files\LuaJIT\2.1.0\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files\LuaJIT\2.1.0\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>srcds_stdio</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>C:\Program Files\LuaJIT\2.1.0\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files\LuaJIT\2.1.0\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>srcds_stdio</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\Program Files\LuaJIT\2.1.0\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files\LuaJIT\2.1.0\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>srcds_stdio</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
